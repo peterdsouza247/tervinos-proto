@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>tervinOS : Linux, distilled to what matters</title>
+<title>tervinOS — Linux, distilled to what matters</title>
 <meta name="description" content="tervinOS is an efficiency-first Linux distribution built around three essentials: a great browser, a powerful markdown notepad, and seamless Steam gaming.">
 <style>
   :root {
@@ -158,6 +158,33 @@
     content: "→"; position: absolute; left: 0; color: var(--basil); font-weight: 700;
   }
 
+  /* Feature grid */
+  .features { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+  .feature {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 26px 24px;
+    box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s;
+  }
+  .feature:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(30, 90, 65, .12); }
+  .feature-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .feature-emoji {
+    width: 40px; height: 40px; border-radius: 11px; flex-shrink: 0;
+    background: var(--mint-soft); border: 1px solid var(--border);
+    display: grid; place-items: center; font-size: 1.15rem;
+  }
+  .feature h3 { font-size: 1.05rem; font-weight: 700; }
+  .feature .desc { color: var(--ink-soft); font-size: .9rem; margin-bottom: 14px; }
+  .feature .foundation-label {
+    font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--basil); margin-bottom: 8px;
+  }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag {
+    font-size: .74rem; font-weight: 600; color: var(--basil-dark);
+    background: var(--mint-soft); border: 1px solid var(--border);
+    padding: 3px 10px; border-radius: 999px; white-space: nowrap;
+  }
+
   /* Efficiency band */
   .band {
     background: linear-gradient(135deg, var(--basil-dark), var(--basil));
@@ -227,6 +254,7 @@
     <a class="logo" href="#"><span class="logo-mark">t</span>tervinOS</a>
     <div class="nav-links">
       <a href="#pillars">Features</a>
+      <a href="#platform">Platform</a>
       <a href="#why">Why tervinOS</a>
       <a href="#faq">FAQ</a>
       <a href="#download" class="btn btn-primary">Download</a>
@@ -236,7 +264,7 @@
 
 <header class="hero">
   <div class="container">
-    <span class="pill">v1.0 “Sprout” - now available</span>
+    <span class="pill">v1.0 “K9” — now available</span>
     <h1>Linux, distilled to <span class="accent">what actually matters</span>.</h1>
     <p>tervinOS strips away the clutter and perfects three things: browsing with Zen, writing in markdown, and gaming on Steam. Nothing more. Nothing slower.</p>
     <div class="hero-actions">
@@ -251,11 +279,11 @@
     <div class="terminal">
       <div class="terminal-bar"><i></i><i></i><i></i></div>
       <pre><span class="prompt">peter@tervin</span>:~$ neofetch
-<span class="dim">        OS:</span> tervinOS 1.0 “Sprout”
+<span class="dim">        OS:</span> tervinOS 1.0 “K9”
 <span class="dim">    Kernel:</span> 6.12 LTS (zen-patched)
 <span class="dim">    Uptime:</span> 14 days, 3 hours
 <span class="dim">    Memory:</span> 447 MiB / 32 GiB
-<span class="dim">  Packages:</span> 412 - only what you need
+<span class="dim">  Packages:</span> 412 — only what you need
 <span class="prompt">peter@tervin</span>:~$ _</pre>
     </div>
   </div>
@@ -281,11 +309,11 @@
       <div class="pillar">
         <div class="pillar-icon">📝</div>
         <h3>Tervin Notes</h3>
-        <p>A fast, native notepad with full markdown support : live preview, syntax highlighting, and instant search across every note.</p>
+        <p>A fast, native notepad with full markdown support — live preview, syntax highlighting, and instant search across every note.</p>
         <ul>
           <li>Live markdown preview &amp; export to PDF/HTML</li>
           <li>Opens in under 100 ms</li>
-          <li>Plain-text files : your notes, forever portable</li>
+          <li>Plain-text files — your notes, forever portable</li>
         </ul>
       </div>
       <div class="pillar">
@@ -297,6 +325,107 @@
           <li>MangoHud &amp; gamemode enabled per-title</li>
           <li>Low-latency kernel scheduling for gaming</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="platform" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <h2>A smarter foundation</h2>
+      <p>tervinOS builds on the best of the Linux ecosystem — every feature stands on proven, battle-tested technology.</p>
+    </div>
+    <div class="features">
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">⭐</div><h3>Adaptive Interface</h3></div>
+        <p class="desc">The desktop adapts to the user, not vice versa.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">KDE Activities</span><span class="tag">Virtual Desktops</span><span class="tag">KWin scripting</span><span class="tag">KDE Window Rules</span><span class="tag">systemd user services</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">🔍</div><h3>Universal Search</h3></div>
+        <p class="desc">Find any file, setting, or app from a single keystroke.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">KRunner</span><span class="tag">Baloo</span><span class="tag">FSearch</span><span class="tag">KDE File Indexer</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">🗂️</div><h3>Persistent Workspaces</h3></div>
+        <p class="desc">Pick up exactly where you left off — windows, tabs, and terminals included.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">KDE Session Restore</span><span class="tag">VS Code Workspaces</span><span class="tag">tmux</span><span class="tag">Konsole sessions</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">🩹</div><h3>Self-Healing OS</h3></div>
+        <p class="desc">The system detects, reports, and recovers from breakage on its own.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">rpm-ostree</span><span class="tag">DNF history</span><span class="tag">systemd</span><span class="tag">journalctl</span><span class="tag">Btrfs</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">🔄</div><h3>Transactional Updates</h3></div>
+        <p class="desc">Updates apply atomically — they either fully succeed or never happen.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Fedora Atomic</span><span class="tag">rpm-ostree</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">🔔</div><h3>Context-Aware Notifications</h3></div>
+        <p class="desc">Alerts that know when you're gaming, focusing, or presenting.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">KDE Notifications</span><span class="tag">Do Not Disturb</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">🛡️</div><h3>Privacy Dashboard</h3></div>
+        <p class="desc">Every permission, firewall rule, and policy in one clear view.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Flatpak permissions</span><span class="tag">SELinux</span><span class="tag">Firewalld</span><span class="tag">Plasma Firewall</span><span class="tag">KDE Settings</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">⚡</div><h3>Dynamic Power Profiles</h3></div>
+        <p class="desc">Performance when you need it, battery life when you don't.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">power-profiles-daemon</span><span class="tag">TLP</span><span class="tag">tuned</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">📦</div><h3>Native Containers</h3></div>
+        <p class="desc">Run any app from any distro, cleanly isolated from the system.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Flatpak</span><span class="tag">Distrobox</span><span class="tag">Toolbox</span><span class="tag">Podman</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">🧊</div><h3>Immutable System</h3></div>
+        <p class="desc">A read-only core that can't be corrupted by a bad install.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Fedora Atomic Desktop</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">⏳</div><h3>Snapshot Time Machine</h3></div>
+        <p class="desc">Roll your entire system back to any point in time, instantly.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Btrfs</span><span class="tag">Snapper</span><span class="tag">Timeshift</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">💾</div><h3>Intelligent Storage</h3></div>
+        <p class="desc">Transparent compression and deduplication keep your disk lean.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Btrfs compression</span><span class="tag">BleachBit</span><span class="tag">Filelight</span><span class="tag">duperemove</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">✨</div><h3>Beautiful Motion</h3></div>
+        <p class="desc">Fluid, purposeful animation across the whole desktop.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Plasma 6 animations</span><span class="tag">KWin effects</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">🖼️</div><h3>Living Desktop</h3></div>
+        <p class="desc">Widgets and dynamic wallpapers that keep your desktop alive.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Plasma widgets</span><span class="tag">Wallpaper plugins</span><span class="tag">Conky</span></div>
+      </div>
+      <div class="feature">
+        <div class="feature-top"><div class="feature-emoji">↩️</div><h3>Everything is Undoable</h3></div>
+        <p class="desc">Any change — update, install, edit — can be reversed.</p>
+        <div class="foundation-label">Linux foundation</div>
+        <div class="tags"><span class="tag">Btrfs snapshots</span><span class="tag">rpm-ostree rollback</span><span class="tag">Git</span><span class="tag">DNF history</span></div>
       </div>
     </div>
   </div>
@@ -370,7 +499,7 @@
       </details>
       <details>
         <summary>Can I install other software?</summary>
-        <p>Absolutely. tervinOS ships lean, but a full package manager and Flatpak support are included : install anything you like. We just won't pre-install it for you.</p>
+        <p>Absolutely. tervinOS ships lean, but a full package manager and Flatpak support are included — install anything you like. We just won't pre-install it for you.</p>
       </details>
       <details>
         <summary>Will my Steam games run?</summary>
@@ -382,7 +511,7 @@
       </details>
       <details>
         <summary>Is it free?</summary>
-        <p>Yes : free to download, use, and share, forever. tervinOS is open source and community-driven.</p>
+        <p>Yes — free to download, use, and share, forever. tervinOS is open source and community-driven.</p>
       </details>
     </div>
   </div>
